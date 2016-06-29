@@ -96,33 +96,35 @@ the first batch of fuel, an initial storage has also been set. To limit the
 effect of decay of this storage, the initial inventory have been tuned to be as
 small as possible (preventing any unnecessary plutonium pilling up).
 
+
 \subsection{Fabrication model}
-Three different way to model the fuel fabrication have been used: ``fix mixing
-ratio'' (``fix''), ``Pu-equivalent`` (''Pu-eq``) and ''Neural Network`` (''NN``).
-The fix mixing ratio used pre-set ratio for the different stream mixing. The
-''Pu-equivalent`` model try to fix the best mixing ratio allowing to reproduce
-the initial reactivity of the requested MOX fuel. As the requested fuel
-composition correspond to the fuel composition built with the ''fix mixing
-ratio`` model, the results of those 2 models are expected to be close.
-The last model use a different approach to mix the different stream: the
-$<k_{infty}>$, the mean infinity neutronic multiplication factor, have to reach
-a threshold at the end of the irradiation ($50~$GWd/t in this study). The
-$<k_{infty}>$ used in this study is 1.034. The Neural Network in this
-model have been pre-trained on several different depletion calculation,
-allowing it to predict the correct plutonium enrichment required.
+
+Three different ways to model the fuel fabrication have been used: ``fix mixing
+ratio'' (``fix''), ``Pu-equivalent`` (''Pu-eq``) and ''Neural Network``
+(''NN``). The ''fix mixing ratio`` consist in pre-set ratio for the different
+stream mixing. The ''Pu-equivalent`` model tries to determine the best mixing
+ratio allowing to reproduce the initial reactivity of the requested MOX fuel. As
+the requested fuel composition corresponds to the fuel composition built with
+the ''fix mixing ratio`` model, the results of those 2 models are expected to be
+close. The last model uses a different approach to mix the different streams:
+the $<k_{infty}>$, the mean infinity neutronic multiplication factor, have to
+reach a threshold at the end of the irradiation ($50~$GWd/t in this study). The
+$<k_{infty}>$ used in this study is 1.034. The Neural Network in this model have
+been pre-trained on several different depletion calculations, allowing it to
+predict the correct plutonium enrichment required.
 
 Because of all those model have not necessary been tuned on exactly the same
-PWR configuration and parameter, only the behavior differences between the
+PWR configuration and parameters, only the behavior differences between the
 different calculations should be analysed..
 
 
 The second part of the study compares the amount of plutonium require to build
 the PWR-MOX fuel (using the neural network modeling for fuel fabrication) for
-the recipe based output composition versus the depletion calculation one.
-To redo the depletion calculation for each fuel loaded in the PWR reactor, an
-other neural network is used to predict the macroscopic cross section of the
-fuel \cite{Leniau2015125} (only fission, capture and n,2n reactions are considered). The
-depletion calculation is done renormalizing the neutron flux to maintain a
+the recipe based output composition versus the depletion calculation one.  To
+redo the depletion calculation for each fuel loaded in the PWR reactor, an other
+neural network is used to predict the macroscopic cross section of the fuel
+\cite{Leniau2015125} (only fission, capture and n,2n reactions are considered).
+The depletion calculation is done renormalizing the neutron flux maintaining a
 constant power in the reactor.
 
 
