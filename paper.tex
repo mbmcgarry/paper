@@ -57,6 +57,7 @@ tool, allowing to use all the fuel fabrication and the depletion models from the
 CLASS tool \cite{CLASS} in Cyclus.
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Study description}
 
 This work compares the plutonium amount require to build the fresh MOX fuel
@@ -131,11 +132,10 @@ constant power in the reactor.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Decay}
 
-
-As observed on Fig. \ref{fig:nod}, despite the different model were not tuned to
-describe the exact same PWR concept, the results without decay process are very
-close. They all predict a constant plutonium fraction around $8\%$ of plutonium
-in the fresh PWR-MOX fuel.
+Despite the different models were not tuned to describe the exact same PWR
+concept, the results without decay process are very close (Fig. \ref{fig:nod}).
+They all predict a constant plutonium fraction around $8\%$ of plutonium in the
+fresh PWR-MOX fuel.
 
 \begin{figure}[ht] % replace 't' with 'b' to force it to be on the bottom
   \centering
@@ -147,9 +147,9 @@ in the fresh PWR-MOX fuel.
 \end{figure}
 
 
-Activating decay, see Fig. \ref{fig:d}, results for the ``fix mixing ratio''
-calculation in a small decrease of the fraction of plutonium in the fuel,
-corresponding to the decay of $^{241}$Pu into $^{241}$Am. For the
+As shown see Fig. \ref{fig:d}, activating decay results for the ``fix mixing
+ratio'' calculation in a small decrease of the fraction of plutonium in the
+fuel, corresponding to the decay of $^{241}$Pu into $^{241}$Am. For the
 ``Pu-equivalent'' modeling we can observe a slight increase of the fraction of
 plutonium, which is required to compensate for the negative reactivity effect
 coming with the $^{241}$Am. For the calculation using ``Neural network'' fuel
