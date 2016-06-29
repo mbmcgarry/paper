@@ -56,7 +56,9 @@ network model have been included into the Cyclus environment using the cyCLASS
 tool, allowing to use all the fuel fabrication and the depletion models from the
 CLASS tool \cite{CLASS} in Cyclus.
 
+
 \section{Study description}
+
 This work compares the plutonium amount require to build the fresh MOX fuel
 using 3 different fabrication models: ``fixed mixing ratio'', ``plutonium
 equivalent theory'', ``Neural network''\cite{Leniau2015125}, considering or not
@@ -69,28 +71,30 @@ fabrication depending on the fabrication modeling. The second part of the study
 compares the impact on the fuel cycle of recipes compositions versus
 recalculated depletion using the neural network fuel fabrication modeling. 
 
-\subsection{Cycle}
-The cycle used for the following study is a very simple cycle implying a single
-PWR reactor using MOX fuel. After irradiation the uranium and the plutonium are
+
+\subsection{Cycle} 
+
+The cycle used for the following study is a very simple cycle
+implying a single PWR reactor using MOX fuel. All the specification of the cycle
+are taken from \cite{Bo}. After irradiation the uranium and the plutonium are
 separated and re-processed to fuel the next batch of MOX fuel for the PWR.
 
 \begin{figure}[ht] % replace 't' with 'b' to force it to be on the bottom
   \centering
   \includegraphics[width=0.48\textwidth]{flow}
-  \caption{Schematic representation of the fuel cycle. Quantities on the row
-  represents the cumulative amount in kg of material exchanged between two
-facilities in the calculation using ``pu-equivalent'' for fuel fabrication
+  \caption{Schematic representation of the fuel cycle. Quantities on the rows
+  represent the cumulative amount in kg of material exchanged between two
+facilities from the calculation using ``pu-equivalent'' for fuel fabrication
 modeling with decay activated.}
   \label{fig:flow}
 \end{figure}
 
-A stream of ``good'' quality plutonium coming from an hypothetical irradiated
+A stream of ``high'' quality plutonium coming from an hypothetical irradiated
 SFR blanket is represented by a storage. The impact of the decay on this storage
-is limited, as the content in $^{241}$Pu is almost negligible.  In order to
-build the first batch of fuel, an initial storage has also been set.  In order
-to limit the effect of decay of this storage the initial inventory have been
-tuned to be as small as possible (preventing any unnecessary plutonium pilling
-up).
+is limited, as the content in $^{241}$Pu is almost negligible. In order to build
+the first batch of fuel, an initial storage has also been set. To limit the
+effect of decay of this storage, the initial inventory have been tuned to be as
+small as possible (preventing any unnecessary plutonium pilling up).
 
 \subsection{Fabrication model}
 Three different way to model the fuel fabrication have been used: ``fix mixing
