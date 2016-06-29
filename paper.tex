@@ -59,7 +59,7 @@ using all the fuel fabrication model and the depletion model from the CLASS tool
 \section{Study description}
 This works compares the plutonium amount require to build the fresh MOX fuel
 using 3 different fabrication modeling: ``fixed mixing ratio'', ``plutonium
-equivalent theory'', ``Neural network \cite{CLASS_MLP}'', considering or not
+equivalent theory'', ``Neural network \cite{Leniau2015125}'', considering or not
 decay, and using recipe reactor or recalculation the depletion for each loaded
 fuel.
 
@@ -117,7 +117,7 @@ the PWR-MOX fuel (using the neural network modeling for fuel fabrication) for
 the recipe based output composition versus the depletion calculation one.
 To redo the depletion calculation for each fuel loaded in the PWR reactor, an
 other neural network is used to predict the macroscopic cross section of the
-fuel \cite{NN_CLASS} (only fission, capture and n,2n reactions are considered). The
+fuel \cite{Leniau2015125} (only fission, capture and n,2n reactions are considered). The
 depletion calculation is done renormalizing the neutron flux to maintain a
 constant power in the reactor.
 
